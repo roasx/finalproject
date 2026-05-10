@@ -1,0 +1,483 @@
+.instrument-serif-regular {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.instrument-serif-regular-italic {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  background: #f6f3ec;
+  color: #43413c;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 0.5px solid rgba(232, 228, 220, 0.15);
+  position: sticky;
+  top: 0;
+  background: #f6f3ec;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-family: "Instrument Serif", serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #43413c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #43413c;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+.nav-links li:hover {
+  color: #f4ae2d;
+}
+
+.nav-cta {
+  background: #43413c;
+  color: #f6f3ec;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.nav-cta:hover {
+  background: #d4d0c8;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2.5rem;
+  overflow: hidden;
+  border-bottom: 0.5px solid rgba(67, 65, 60, 0.2);
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(177, 157, 112, 0.45);
+  z-index: 1; /* sits above video, below content */
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  max-width: 560px;
+}
+
+.hero-title {
+  font-family: "Instrument Serif", serif;
+  font-size: 6vw;
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
+  color: #f6f3ec;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: #f5ba3b;
+}
+
+.hero-body {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #f6f3ec;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  max-width: 380px;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  border: 0.5px solid #f6f3ec;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f6f3ec;
+  cursor: pointer;
+  background: transparent;
+  font-family: inherit;
+  font-weight: 300;
+  margin-right: 1rem;
+}
+
+.btn:hover {
+  background: rgba(232, 228, 220, 0.05);
+}
+
+.btn-filled {
+  background: #e8e4dc;
+  color: #1a1917;
+}
+.btn-filled:hover {
+  background: #d4d0c8;
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid #43413c;
+  border-top: 0.5px solid #43413c;
+}
+
+.ticker {
+  display: flex;
+  gap: 3rem;
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker span {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #43413c;
+}
+
+.manifesto {
+  padding: 5rem 2.5rem;
+  display: flex;
+  justify-content: right;
+  gap: 4rem;
+  border-bottom: 0.5px solid #43413c;
+}
+
+.manifesto-quote {
+  font-family: "Instrument Serif", serif;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: #43413c;
+  border-left: 0.5px solid rgba(232, 228, 220, 0.15);
+  padding-left: 50%;
+}
+
+.collection {
+  padding: 5rem 2.5rem;
+  border-bottom: 0.5px solid #43413c;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: "Instrument Serif", serif;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #43413c;
+}
+
+.section-subtitle {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(232, 228, 220, 0.3);
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(232, 228, 220, 0.08);
+}
+
+.filter-card {
+  background: #f6f3ec;
+  padding: 2rem 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.filter-card:hover {
+  background: #f4ae2d;
+}
+
+.filter-visual {
+  height: 140px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.filter-shape {
+  width: 80px;
+  height: 80px;
+  border: 0.5px solid #f4ae2d;
+}
+
+.filter-name {
+  font-family: "Instrument Serif", serif;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #43413c;
+  margin-bottom: 0.5rem;
+}
+
+.filter-description {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #43413c;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.filter-price {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #43413c;
+  text-transform: uppercase;
+}
+
+.filter-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #43413c;
+  border: 0.5px solid rgba(232, 228, 220, 0.15);
+  padding: 3px 8px;
+}
+
+.pricing {
+  padding: 5rem 2.5rem;
+  border-bottom: 0.5px solid #43413c;
+}
+
+.pricing-intro {
+  max-width: 520px;
+  margin-bottom: 3rem;
+}
+
+.pricing-intro p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #43413c;
+  letter-spacing: 0.02em;
+  margin-top: 1rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #f6f3ec;
+}
+
+.plan-card {
+  background: #f6f3ec;
+  padding: 2.5rem 2rem;
+  position: relative;
+}
+
+.plan-card.featured {
+  background: #e9e6e0;
+}
+
+.plan-tier {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #43413c;
+  margin-bottom: 1.5rem;
+}
+
+.plan-price {
+  font-family: "Instrument Serif", serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: #43413c;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.plan-price sup {
+  font-size: 20px;
+  vertical-align: super;
+}
+
+.plan-cadence {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #43413c;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+
+.plan-features li {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #43413c;
+  padding: 0.6rem 0;
+  border-bottom: 0.5px solid #43413c;
+  letter-spacing: 0.02em;
+}
+
+.plan-features li::before {
+  content: "—  ";
+  color: #43413c;
+}
+
+.plan-cta {
+  width: 100%;
+  padding: 0.85rem;
+  border: 0.5px solid #43413c;
+  background: transparent;
+  color: #43413c;
+  font-family: inherit;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.plan-cta:hover {
+  background: #43413c;
+  color: #f6f3ec;
+}
+.featured .plan-cta {
+  border-color: #43413c;
+}
+
+.plan-note {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: #43413c;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.site-footer {
+  padding: 4rem 2.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.footer-brand {
+  font-family: "Instrument Serif", serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #43413c;
+  margin-bottom: 1rem;
+}
+
+.footer-copy {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #43413c;
+  letter-spacing: 0.03em;
+}
+
+.footer-col h4 {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f6f3ec;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  font-size: 11px;
+  color: #43413c;
+  padding: 0.3rem 0;
+  letter-spacing: 0.05em;
+}
+
+.disclaimer {
+  padding: 1.5rem 2.5rem;
+  border-top: 0.5px solid #43413c;
+  font-size: 9px;
+  color: #43413c;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+}
